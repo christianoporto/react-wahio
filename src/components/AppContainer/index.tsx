@@ -14,7 +14,6 @@ import {
 import Logo from "../../images/logo.png";
 import { AppSettingsContext } from "../../appSettings/AppSettingsContext";
 import { THEME_DARK } from "../../appSettings/types";
-import { NavLink } from "react-router-dom";
 
 interface IProps {
     children: React.ReactNode;

@@ -3,12 +3,11 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { I18nProvider } from "./i18n";
 import AppSettingsProvider from "./appSettings/AppSettingsContext";
 import StyledThemeProvider from "./theme/themeProvider";
+import TodoContextProvider from "./store/contexts/TodoContext";
 import GlobalStyled from "./globalStyled";
 import LoadingDualRing from "./components/LoadingDualRing";
 import Home from "./pages/Home";
 import AppContainer from "./components/AppContainer";
-
-
 
 interface IContextProviders {
     children: React.ReactNode;
@@ -18,7 +17,9 @@ const ContextProviders = ({ children }: IContextProviders) => {
     return (
         <AppSettingsProvider>
             <I18nProvider>
-                <StyledThemeProvider>{children}</StyledThemeProvider>
+                <StyledThemeProvider>
+                    <TodoContextProvider>{children}</TodoContextProvider>
+                </StyledThemeProvider>
             </I18nProvider>
         </AppSettingsProvider>
     );

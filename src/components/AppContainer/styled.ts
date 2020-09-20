@@ -49,4 +49,8 @@ export const LanguegeContainer = styled.div`
     height: 40px;
 `;
 
-export const ContentContainer = styled.div``;
+export const ContentContainer = styled.div`
+max-width: 800px;
+width: 100%;
+margin: auto;
+`;
