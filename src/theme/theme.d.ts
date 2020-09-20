@@ -6,7 +6,7 @@ declare module "styled-components" {
         breakpoints: {
             [name in "xs" | "sm" | "md" | "lg" | "xl"]: number;
         };
-        theme: IThemePalette;
+        palette: IThemePalette;
     }
 }
 

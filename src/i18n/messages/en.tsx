@@ -1,6 +1,6 @@
 import { LOCALES } from "../locales";
-import esES from "../../translations/en.json";
+import en from "../translations/en.json";
 
 export default {
-    [LOCALES.ENGLISH]: esES,
+    [LOCALES.ENGLISH]: en,
 };

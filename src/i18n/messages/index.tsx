@@ -1,5 +1,6 @@
-import es from "./es-ES";
-import en from "./es-ES";
+import es from "./es";
+import en from "./en";
+
 export default {
     ...en,
     ...es,

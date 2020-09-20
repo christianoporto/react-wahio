@@ -1,5 +1,6 @@
+
 const languages = {
-    SPANISH: "es-ES",
+    SPANISH: "es",
     ENGLISH: "en",
 };
 

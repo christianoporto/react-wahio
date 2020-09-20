@@ -23,7 +23,7 @@ function StyledThemeProvider(props: any) {
         <ThemeProvider
             theme={{
                 breakpoints,
-                theme: themeState.theme === THEME_LIGHT ? lightTheme : darkTheme,
+                palette: themeState.theme === THEME_LIGHT ? lightTheme : darkTheme,
             }}
         >
             {children}

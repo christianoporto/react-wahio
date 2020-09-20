@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { I18nProvider } from "./i18n";
+import AppSettingsProvider from "./appSettings/AppSettingsContext";
+import StyledThemeProvider from "./theme/themeProvider";
+import GlobalStyled from "./globalStyled";
+import LoadingDualRing from "./components/LoadingDualRing";
+import Home from "./pages/Home";
+import AppContainer from "./components/AppContainer";
+
+
+
+interface IContextProviders {
+    children: React.ReactNode;
+}
+
+const ContextProviders = ({ children }: IContextProviders) => {
+    return (
+        <AppSettingsProvider>
+            <I18nProvider>
+                <StyledThemeProvider>{children}</StyledThemeProvider>
+            </I18nProvider>
+        </AppSettingsProvider>
+    );
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ContextProviders>
+            <Suspense fallback={<LoadingDualRing />}>
+                <BrowserRouter>
+                    <AppContainer>
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                        </Switch>
+                        <GlobalStyled />
+                    </AppContainer>
+                </BrowserRouter>
+            </Suspense>
+        </ContextProviders>
+    );
 }
 
 export default App;

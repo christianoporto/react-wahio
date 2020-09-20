@@ -1,0 +1,10 @@
+{
+  "components": {
+    "appContainer": {
+      "darkMode": "Modo Oscuro",
+      "english": "Ingles",
+      "spanish": "Español",
+      "title": "React Wahio"
+    }
+  }
+}

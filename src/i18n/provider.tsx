@@ -1,18 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { IntlProvider } from "react-intl";
 import messages from "./messages";
-import { LOCALES } from "./locales";
 import flatten from "flat";
+import { AppSettingsContext } from "../appSettings/AppSettingsContext";
 
 interface IProviderProps {
-    children: any;
-    locale?: string;
+    children: React.ReactNode;
 }
 
-const Provider = ({ children, locale = LOCALES.SPANISH }: IProviderProps) => (
-    <IntlProvider locale={locale} textComponent={Fragment} messages={flatten(messages[locale])}>
-        {children}
-    </IntlProvider>
-);
+const Provider = ({ children }: IProviderProps) => {
+    const { appSettingsState } = useContext(AppSettingsContext);
+    const locale = appSettingsState.language;
+    return (
+        <IntlProvider locale={locale} textComponent={Fragment} messages={flatten(messages[locale])}>
+            {children}
+        </IntlProvider>
+    );
+};
 
 export default Provider;
