@@ -1,12 +1,20 @@
-# Welcome to React Wahio by Christian Oporto
+<img src="https://wahiomedia.blob.core.windows.net/react-wahio/logo.jpg" alt="reactwahio banner" align="center" />
+
+<br/>
+
+<br />
+
+<h2 align="center"><strong>Welcome to React Wahio by Christian Oporto</strong></h2>
+<div align="center">This `React application` is created with Typescript and Hooks, and replaces Redux, Redux-saga, and Redux-persist using only React Context. It also uses Styled-components and supports i18n internationalization with message extractor.</div>
+
+<br />
+
 
 > The documentation of this project is still in process, any questions please contact me by this same means.
 
 <br/>
 
-This `React application` is created with Typescript and Hooks, and replaces Redux, Redux-saga, and Redux-persist using only React Context. It also uses Styled-components and supports i18n internationalization with message extractor.
-
-# Features
+## Features
 
 # To work with internationalization messages
 
