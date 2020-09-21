@@ -1,4 +1,4 @@
-export const SET_TODO = "SET_TODO";
+export const ADD_TODO = "ADD_TODO";
 export const REQUEST_TODOS = "REQUEST_TODOS";
 export const RECEIVE_TODOS = "RECEIVE_TODOS";
 export const DELETE_TODO = "DELETE_TODOS";
@@ -13,8 +13,8 @@ export interface ITodo {
     completed: boolean;
 }
 
-export interface ISetTodo {
-    type: typeof SET_TODO;
+export interface IAddTodo {
+    type: typeof ADD_TODO;
     value: ITodo;
 }
 
@@ -28,4 +28,4 @@ export interface IDeleteTodo {
     todoId: string;
 }
 
-export type TodoTypes = ISetTodo | IDeleteTodo | IUpdateTodo;
+export type TodoTypes = IAddTodo | IDeleteTodo | IUpdateTodo;

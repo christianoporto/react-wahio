@@ -5,6 +5,20 @@
       "english": "English",
       "spanish": "Spanish",
       "title": "React Wahio"
+    },
+    "todoCard": {
+      "edit": "Edit"
+    }
+  },
+  "pages": {
+    "home": {
+      "add": "Add",
+      "addTask": "Add task",
+      "appDescription": "This is a React application that uses 100% hooks, and replaces Redux, Redux-saga, and Redux-persist using only React Context. It also uses Styled-components and supports i18n internationalization with message extractor.",
+      "moreInfo": "For more information, see README.md",
+      "taskTitle": "Tasks",
+      "tasksSubtitle": "Create, edit and delete tasks, your tasks will be kept in memory, even if you refresh the browser.",
+      "welcome": "Welcome to React Wahio"
     }
   }
 }

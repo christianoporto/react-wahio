@@ -2,16 +2,8 @@ import React, { useContext } from "react";
 import { FormattedMessage } from "react-intl";
 import messages from "./messages";
 import ToggleSwitch from "../ToggleSwitch";
-import {
-    MainContainer,
-    ContentContainer,
-    MenuContainer,
-    Menu,
-    ImgLogo,
-    FlexContainer,
-    LanguageLabel,
-} from "./styled";
-import Logo from "../../images/logo.png";
+import { MainContainer, ContentContainer, MenuContainer, Menu, ImgLogo, FlexContainer, LanguageLabel } from "./styled";
+import Logo from "../../assets/images/logo.png";
 import { AppSettingsContext } from "../../appSettings/AppSettingsContext";
 import { THEME_DARK } from "../../appSettings/types";
 
@@ -35,9 +27,7 @@ export default function AppContainer({ children }: IProps) {
                 <Menu>
                     <FlexContainer>
                         <ImgLogo src={Logo} alt="logo" />
-                        <span>
-                            <FormattedMessage {...messages.title} />
-                        </span>
+                        <span test-id="test-title" id="title">React Wahio</span>
                     </FlexContainer>
                     <FlexContainer>
                         <FlexContainer>
@@ -46,10 +36,7 @@ export default function AppContainer({ children }: IProps) {
                             </span>
                             <ToggleSwitch
                                 checked={appSettingsState.theme === THEME_DARK}
-                                onChange={(value) => {
-                                    appSettingsActions.changeTheme();
-                                    console.log(value);
-                                }}
+                                onChange={() => appSettingsActions.changeTheme()}
                             />
                         </FlexContainer>
                         <div>
