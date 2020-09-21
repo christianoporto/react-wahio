@@ -93,6 +93,7 @@ export const InputTitle = styled.input`
     background: ${(props) => props.theme.palette.background};
     color: ${(props) => props.theme.palette.text};
     margin-right: 10px;
+    padding-left: 0;
     ${(props: IActiveProps) =>
         props.active &&
         `

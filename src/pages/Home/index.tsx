@@ -21,7 +21,9 @@ export default function Home() {
                 <FormattedMessage {...messages.appDescription} />
                 <br />
                 <span className="subtitle">
-                    <FormattedMessage {...messages.moreInfo} />
+                    <a href="https://github.com/christianoporto/react-wahio/blob/master/README.md">
+                        <FormattedMessage {...messages.moreInfo} />
+                    </a>
                 </span>
             </p>
             <br />
