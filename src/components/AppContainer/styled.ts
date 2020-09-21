@@ -1,11 +1,10 @@
 import styled from "styled-components";
+import { breakpoint } from "../../theme/themeProvider";
 
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
-
-
 
 export const MenuContainer = styled.div`
     display: flex;
@@ -24,12 +23,24 @@ export const Menu = styled.div`
     margin: auto;
     justify-content: space-between;
     padding: 0px 18px;
+    #title {
+        display: none;
+    }
+    ${breakpoint("sm")`
+        #title { 
+            display: block;
+        }
+    `}
 `;
 
 export const FlexContainer = styled.div`
     display: flex;
     align-items: center;
     grid-gap: 10px;
+    ${breakpoint("sm")`
+    flex-direction: row;
+    grid-gap: 10px;
+        `}
 `;
 
 export const ImgLogo = styled.img`
@@ -38,10 +49,14 @@ export const ImgLogo = styled.img`
 `;
 
 export const LanguageLabel = styled.span`
-    padding: 0px 12px;
+    padding: 0px 2px;
     .lang-active {
         color: ${(props) => props.theme.palette.primary};
     }
+
+    ${breakpoint("sm")`
+    padding: 0px 12px;
+        `}
 `;
 
 export const LanguegeContainer = styled.div`
@@ -50,7 +65,7 @@ export const LanguegeContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-max-width: 800px;
-width: 100%;
-margin: auto;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
 `;

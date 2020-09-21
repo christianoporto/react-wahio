@@ -14,6 +14,13 @@
 
 <br/>
 
+# Demo
+
+[![Build status](https://dev.azure.com/wahio/wahio/_apis/build/status/react-wahio%20-%20CI)](https://dev.azure.com/wahio/wahio/_build/latest?definitionId=52)
+
+[https://reactwahio.z13.web.core.windows.net/](https://reactwahio.z13.web.core.windows.net/) <br/>
+
+
 ## Features
 
 # To work with internationalization messages

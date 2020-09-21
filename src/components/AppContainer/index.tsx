@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { FormattedMessage } from "react-intl";
 import messages from "./messages";
 import ToggleSwitch from "../ToggleSwitch";
-import { MainContainer, ContentContainer, MenuContainer, Menu, ImgLogo, FlexContainer, LanguageLabel } from "./styled";
-import Logo from "../../assets/images/logo.png";
+import { MainContainer, ContentContainer, MenuContainer, Menu, ImgLogo, FlexContainer, LanguageLabel  } from "./styled";
+import Logo from "../../assets/images/reactwahiologo.png";
 import { AppSettingsContext } from "../../appSettings/AppSettingsContext";
 import { THEME_DARK } from "../../appSettings/types";
 
