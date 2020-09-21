@@ -17,7 +17,7 @@
       "appDescription": "Esta es una aplicación de React que usa 100% hooks, y reemplaza Redux, Redux-saga y Redux-persist usando únicamente React Context. También utiliza Styled-components y soporta i18n internacionalizacion con extractor de mensajes.",
       "moreInfo": "Para más información, ver README.md",
       "taskTitle": "Tareas",
-      "tasksSubtitle": "Crea, edita y elimina las tareas, tus tareas se mantendran en memoria, inclusyo si refrezcas el navegador",
+      "tasksSubtitle": "Crea, edita y elimina las tareas, tus tareas se mantendran en memoria, incluso si refrezcas el navegador",
       "welcome": "Bienvenido a React Wahio"
     }
   }
