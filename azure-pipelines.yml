@@ -22,7 +22,7 @@ steps:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/drop.zip'
     replaceExistingArchive: true
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
