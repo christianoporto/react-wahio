@@ -50,7 +50,7 @@ export const ButtomComplete = styled.button`
     align-items: center;
     margin-right: 15px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: border 0.2s;
     ${(props: IActiveProps) =>
         `background:  ${props.active ? props.theme.palette.primary : props.theme.palette.background};
      border: 1px solid ${props.active ? "transparent" : props.theme.palette.backgroundDarker};
