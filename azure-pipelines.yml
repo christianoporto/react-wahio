@@ -18,15 +18,13 @@ steps:
   displayName: 'npm install and build'
 
 - task: ArchiveFiles@2
+  displayName: 'Archive files'
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/drop.zip'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: false
+    archiveType: zip
+    archiveFile: $(Build.ArtifactStagingDirectory)/drop.zip
     replaceExistingArchive: true
-  
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/drop.zip'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+
+- upload: $(Build.ArtifactStagingDirectory)/drop.zip
+  artifact: drop
