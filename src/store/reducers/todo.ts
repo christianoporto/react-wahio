@@ -1,14 +1,15 @@
-import { DELETE_TODO, ITodo, ADD_TODO, TodoTypes, TODO_STORE_KEY, UPDATE_TODO } from "../types/todo";
+import { getStoredData, StoreKey } from "..";
+import { DELETE_TODO, ITodo, ADD_TODO, TodoTypes, UPDATE_TODO } from "../types/todo";
 
 export interface ITodoState {
     todos: ITodo[];
 }
 
-const initStateBase: ITodoState = {
+const defaultState: ITodoState = {
     todos: [{ id: "_1", title: "I am a basic task", dateCreated: new Date(), completed: false }],
 };
 
-export const initState: ITodoState = JSON.parse(localStorage.getItem(TODO_STORE_KEY) as string) || initStateBase;
+export const initState = getStoredData<ITodoState>(defaultState, StoreKey.todo);
 
 export const todoReducer = (state: ITodoState, action: TodoTypes): ITodoState => {
     switch (action.type) {
