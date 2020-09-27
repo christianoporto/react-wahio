@@ -4,8 +4,6 @@ export const RECEIVE_TODOS = "RECEIVE_TODOS";
 export const DELETE_TODO = "DELETE_TODOS";
 export const UPDATE_TODO = "UPDATE_TODO";
 
-export const TODO_STORE_KEY = "todos";
-
 export interface ITodo {
     id: string;
     title: string;

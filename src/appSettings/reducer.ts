@@ -1,16 +1,17 @@
-import { AppSettingsTypes, CHANGE_THEME, THEME_LIGHT, THEME_DARK, APP_SETTINGS_KEY, SET_LANGUAGE } from "./types";
+import { getStoredData, StoreKey } from "../store";
+import { AppSettingsTypes, CHANGE_THEME, THEME_LIGHT, THEME_DARK, SET_LANGUAGE } from "./types";
 
 export interface IAppSettingsState {
     theme: string;
     language: string;
 }
 
-export const initStateBase: IAppSettingsState = {
+export const defaultState: IAppSettingsState = {
     theme: THEME_LIGHT,
     language: "en",
 };
 
-export const initState: IAppSettingsState = JSON.parse(localStorage.getItem(APP_SETTINGS_KEY) as string) || initStateBase;
+export const initState = getStoredData<IAppSettingsState>(defaultState, StoreKey.appSettings);
 
 const loadNewTheme = (state: IAppSettingsState): IAppSettingsState => {
     const newTheme = state.theme === THEME_LIGHT ? THEME_DARK : THEME_LIGHT;
