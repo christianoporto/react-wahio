@@ -9,9 +9,16 @@ const checkKey = (key: string) => {
     return persistOptions.find((x) => x === key);
 };
 
+//add you app name
+const PREFIX = "appName";
+
+const getKeyName = (keyName: string) => {
+    return PREFIX + keyName;
+};
+
 export function getStoredData<T>(defaultState: T, keyName: string): T {
     if (!checkKey(keyName)) return defaultState;
-    const storeItem = localStorage.getItem(keyName) as string;
+    const storeItem = localStorage.getItem(getKeyName(keyName)) as string;
     if (storeItem) {
         try {
             const localData: T = JSON.parse(storeItem);
@@ -24,5 +31,5 @@ export function getStoredData<T>(defaultState: T, keyName: string): T {
 }
 
 export function saveData<T>(keyName: string, obj: T) {
-    if (checkKey(keyName)) localStorage.setItem(keyName, JSON.stringify(obj));
+    if (checkKey(keyName)) localStorage.setItem(getKeyName(keyName), JSON.stringify(obj));
 }
